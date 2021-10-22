@@ -23,43 +23,38 @@ body {
   background-position: top;
   position: relative;
   clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%); }
-
-.header__logo-box {
-  position: absolute;
-  top: 2rem;
-  left: 2rem; }
-
-.logo {
-  height: 3.2rem; }
-
-.header__text-box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center; }
+  .header__logo-box {
+    position: absolute;
+    top: 2rem;
+    left: 2rem; }
+  .header__logo {
+    height: 3.2rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .heading-1 {
   color: #fff;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 6.4rem; }
-
-.heading-1--main {
-  display: block;
-  font-size: 6.4rem;
-  letter-spacing: 2.4rem;
-  animation-name: moveInRight;
-  animation-duration: 2s;
-  animation-timing-function: ease-out; }
-
-.heading-1--sub {
-  display: block;
-  font-size: 2rem;
-  letter-spacing: 1rem;
-  animation-name: moveInLeft;
-  animation-duration: 2s;
-  animation-timing-function: ease-out; }
+  .heading-1--main {
+    display: block;
+    font-size: 6.4rem;
+    letter-spacing: 2.4rem;
+    animation-name: moveInRight;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; }
+  .heading-1--sub {
+    display: block;
+    font-size: 2rem;
+    letter-spacing: 1rem;
+    animation-name: moveInLeft;
+    animation-duration: 2s;
+    animation-timing-function: ease-out; }
 
 @keyframes moveInRight {
   0% {
@@ -85,8 +80,7 @@ body {
     opacity: 1;
     transform: translate(0); } }
 
-.btn:link,
-.btn:visited {
+.btn:link, .btn:visited {
   display: inline-block;
   text-decoration: none;
   text-transform: uppercase;
@@ -99,6 +93,9 @@ body {
 
 .btn:hover {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.8);
+    opacity: 0; }
 
 .btn:active {
   transform: translateY(0.1rem);
@@ -107,6 +104,8 @@ body {
 .btn--white {
   color: #555;
   background-color: #fff; }
+  .btn--white::after {
+    background-color: #fff; }
 
 .btn::after {
   content: "";
@@ -119,13 +118,6 @@ body {
   left: 0;
   z-index: -1;
   transition: all 0.4s; }
-
-.btn--white::after {
-  background-color: #fff; }
-
-.btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.8);
-  opacity: 0; }
 
 .btn--animated {
   animation: moveInBottom 2s ease-out; }
