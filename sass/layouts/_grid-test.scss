@@ -1,0 +1,45 @@
+$grid-width: 114rem;
+$grid-row-gap: 4rem;
+$grid-col-gap: 8rem;
+
+.row {
+  max-width: $grid-width;
+  margin: 0 auto;
+  display: flow-root;
+
+  &:not(:last-child) {
+    margin-bottom: $grid-row-gap;
+  }
+
+  [class^="col-"] {
+    float: left;
+
+    &:not(:last-child) {
+      margin-right: $grid-col-gap;
+    }
+  }
+
+  .col-1-of-2 {
+    width: calc((100% - #{$grid-col-gap}) / 2);
+  }
+
+  .col-1-of-3 {
+    width: calc((100% - 2 *#{$grid-col-gap}) / 3);
+  }
+
+  .col-2-of-3 {
+    width: calc(2 * (100% - 2 *#{$grid-col-gap}) / 3 + #{$grid-col-gap});
+  }
+
+  .col-1-of-4 {
+    width: calc((100% - 3 * #{$grid-col-gap}) / 4);
+  }
+
+  .col-2-of-4 {
+    width: calc(2 * (100% - 3 * #{$grid-col-gap}) / 4 + #{$grid-col-gap});
+  }
+
+  .col-3-of-4 {
+    width: calc(3 * (100% - 3 *#{$grid-col-gap}) / 4 + 2 *#{$grid-col-gap});
+  }
+}
