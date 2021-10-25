@@ -35,8 +35,11 @@ GREYS: #777
 ## BORDER-RADIUS
 
 100% left-right
+0.6rem
 
 ## SHADOWS
+
+box-shadow: 0 1.5rem 4rem rgba($color-black, 0.4);
 
 ## ANIMATIONS DURATION - s
 
