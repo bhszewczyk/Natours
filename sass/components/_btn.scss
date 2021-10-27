@@ -9,6 +9,7 @@
     padding: 1.6rem 3.2rem;
     border-radius: 3.2rem;
     transition: all 0.1s;
+    z-index: 2;
 
     position: relative;
   }
@@ -32,6 +33,15 @@
 
     &::after {
       background-color: $color-white;
+    }
+  }
+
+  &--green {
+    color: $color-grey--light-1;
+    background-color: $color-primary--dark;
+
+    &::after {
+      background-color: $color-primary--dark;
     }
   }
 

@@ -184,6 +184,10 @@ body {
   margin-bottom: 1.6rem;
 }
 
+.u-margin-top-big {
+  margin-top: 8rem;
+}
+
 .btn:link, .btn:visited {
   display: inline-block;
   text-decoration: none;
@@ -194,6 +198,7 @@ body {
   border-radius: 3.2rem;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
+  z-index: 2;
   position: relative;
 }
 
@@ -222,6 +227,15 @@ body {
 
 .btn--white::after {
   background-color: #fff;
+}
+
+.btn--green {
+  color: #f7f7f7;
+  background-color: #28b485;
+}
+
+.btn--green::after {
+  background-color: #28b485;
 }
 
 .btn::after {
@@ -380,6 +394,16 @@ body {
   background-image: linear-gradient(to right bottom, #9ec2f5, #1561cb);
 }
 
+.card__side--back-2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485));
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485);
+}
+
+.card__side--back-3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffa743), to(#c77509));
+  background-image: linear-gradient(to right bottom, #ffa743, #c77509);
+}
+
 .card:hover .card__side--front {
   -webkit-transform: rotateY(-180deg);
           transform: rotateY(-180deg);
@@ -404,11 +428,13 @@ body {
 }
 
 .card__picture--2 {
-  background-image: url(../../img/nat-6.jpg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#7ed56f), to(#28b485)), url(../../img/nat-6.jpg);
+  background-image: linear-gradient(to right bottom, #7ed56f, #28b485), url(../../img/nat-6.jpg);
 }
 
 .card__picture--3 {
-  background-image: url(../../img/nat-7.jpg);
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#ffa743), to(#c77509)), url(../../img/nat-7.jpg);
+  background-image: linear-gradient(to right bottom, #ffa743, #c77509), url(../../img/nat-7.jpg);
 }
 
 .card__heading {
@@ -423,12 +449,25 @@ body {
   width: 75%;
 }
 
-.card__heading-span--1 {
+.card__heading-span {
   padding: 0.5rem 1.6rem;
   -webkit-box-decoration-break: clone;
           box-decoration-break: clone;
+}
+
+.card__heading-span--1 {
   background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(158, 194, 245, 0.85)), to(rgba(21, 97, 203, 0.85)));
   background-image: linear-gradient(to right bottom, rgba(158, 194, 245, 0.85), rgba(21, 97, 203, 0.85));
+}
+
+.card__heading-span--2 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(126, 213, 111, 0.85)), to(rgba(40, 180, 133, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.85), rgba(40, 180, 133, 0.85));
+}
+
+.card__heading-span--3 {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 167, 67, 0.85)), to(rgba(199, 117, 9, 0.85)));
+  background-image: linear-gradient(to right bottom, rgba(255, 167, 67, 0.85), rgba(199, 117, 9, 0.85));
 }
 
 .card__details {
@@ -449,6 +488,30 @@ body {
 
 .card__details ul li:not(:last-child) {
   border-bottom: 1px solid #e7e7e7;
+}
+
+.card__cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 90%;
+  text-align: center;
+}
+
+.card__price-box {
+  color: #fff;
+  margin-bottom: 6.4rem;
+}
+
+.card__price-only {
+  font-size: 1.6rem;
+  text-transform: uppercase;
+}
+
+.card__price-value {
+  font-size: 6.2rem;
 }
 
 .header {
@@ -527,6 +590,7 @@ body {
 .section-tours {
   background-color: #f7f7f7;
   padding: 25rem 1.6rem;
+  z-index: -1;
   margin-top: -20rem;
 }
 
