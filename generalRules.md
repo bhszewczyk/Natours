@@ -35,7 +35,7 @@ GREYS: #777
 ## BORDER-RADIUS
 
 100% left-right
-0.6rem
+2px - default
 
 ## SHADOWS
 

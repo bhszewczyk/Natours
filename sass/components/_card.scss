@@ -9,7 +9,7 @@
     transition: all 0.8s ease;
     font-size: 3rem;
 
-    border-radius: 0.6rem;
+    border-radius: $border-radius-default;
     overflow: hidden;
     box-shadow: 0 0 1rem rgba($color-black, 0.2);
 
