@@ -18,6 +18,10 @@
     text-align: center;
     border-bottom: 1px solid $color-grey--dark-1;
     padding-bottom: 4rem;
+
+    @include respond(phone) {
+      padding-bottom: 2rem;
+    }
   }
 
   &__logo {

@@ -172,3 +172,61 @@
     font-size: 6.2rem;
   }
 }
+
+// FOR TOUCH DEVICES
+@include respond(tablet-port) {
+  .card {
+    height: auto;
+    border-radius: $border-radius-default;
+    box-shadow: 0 0 1rem rgba($color-black, 0.2);
+
+    &__side {
+      height: auto;
+      position: relative;
+      font-size: 2.4rem;
+      box-shadow: none;
+
+      &--front {
+        padding-bottom: 4rem;
+      }
+
+      &--back {
+        transform: rotateY(0);
+        backface-visibility: visible;
+        clip-path: polygon(0 10%, 100% 0%, 100% 100%, 0% 100%);
+        margin-top: -4rem;
+        border-radius: 0;
+      }
+    }
+
+    &:hover &__side--front {
+      transform: rotateY(0);
+    }
+
+    &__details {
+      padding: 1rem 6rem;
+    }
+
+    // BACK SIDE STYLING
+    &__cta {
+      position: relative;
+      width: 100%;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      padding: 4rem;
+    }
+
+    &__price-box {
+      margin-bottom: 2.4rem;
+    }
+
+    &__price-only {
+      font-size: 1.2rem;
+    }
+
+    &__price-value {
+      font-size: 3.2rem;
+    }
+  }
+}

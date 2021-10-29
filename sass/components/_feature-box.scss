@@ -8,6 +8,13 @@
   box-shadow: $box-shadow-container;
   transition: all 0.2s;
 
+  @include respond(tablet-port) {
+    padding: 1.8rem;
+    max-width: 80%;
+    margin: 0 auto;
+    min-height: 22rem;
+  }
+
   &__icon {
     padding: 0.4rem 0;
     font-size: 4.4rem;

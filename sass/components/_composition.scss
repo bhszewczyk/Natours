@@ -9,19 +9,33 @@
     outline-offset: 1.6rem;
     z-index: 10;
 
+    @include respond(tablet-port) {
+      width: 75%;
+      float: left;
+      position: relative;
+      width: 33.333%;
+    }
+
     &--p1 {
-      left: 0;
+      left: 2rem;
       top: 2rem;
     }
 
     &--p2 {
-      right: 0rem;
+      right: 0;
       top: 6rem;
+      @include respond(tablet-port) {
+        top: 4rem;
+      }
     }
 
     &--p3 {
-      left: 20%;
+      left: 0;
       top: 14rem;
+      @include respond(tablet-port) {
+        top: 2rem;
+        left: -2rem;
+      }
     }
 
     &:hover {

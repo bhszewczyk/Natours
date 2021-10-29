@@ -9,7 +9,7 @@
   z-index: 9999;
 
   opacity: 0;
-  visibility: hidden;
+  visibility: visible;
   transition: all 0.6s;
 
   &:target {
@@ -50,11 +50,24 @@
     display: table;
     transform: translate(-50%, -50%) scale(0.2);
     transition: all 0.6s;
+
+    @include respond(tablet-land) {
+      width: 100%;
+    }
+
+    @include respond(tablet-port) {
+      display: inline-block;
+    }
   }
 
   &__left {
     display: table-cell;
     width: 33.33%;
+
+    @include respond(tablet-port) {
+      float: left;
+      width: 100%;
+    }
   }
 
   &__right {
@@ -62,11 +75,30 @@
     width: 66.66%;
     vertical-align: middle;
     padding: 2.4rem 4.8rem;
+
+    @include respond(tablet-land) {
+      width: 100%;
+    }
+
+    @include respond(tablet-port) {
+      display: inline-block;
+      width: 100%;
+    }
   }
 
   &__tour-image {
     display: block;
     width: 100%;
+
+    @include respond(tablet-land) {
+      width: 100%;
+    }
+
+    @include respond(tablet-port) {
+      width: 49%;
+      transform: scale(1.1);
+      display: inline;
+    }
   }
 
   &__info {
@@ -78,5 +110,9 @@
     column-gap: 3.2rem;
     column-rule: 2px solid $color-grey--light-2;
     hyphens: auto;
+
+    @include respond(tablet-land) {
+      column-count: 1;
+    }
   }
 }
