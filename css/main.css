@@ -318,6 +318,15 @@ body {
      object-fit: cover;
 }
 
+@media (min-width: 112.5em) {
+  .bg-video__content {
+    width: 100%;
+    -webkit-transform: scale(1.4);
+            transform: scale(1.4);
+    margin: 0 auto;
+  }
+}
+
 .btn, .btn:link, .btn:visited {
   display: inline-block;
   text-decoration: none;

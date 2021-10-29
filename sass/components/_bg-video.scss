@@ -8,5 +8,10 @@
 
   &__content {
     object-fit: cover;
+    @include respond(desktop-big) {
+      width: 100%;
+      transform: scale(1.4);
+      margin: 0 auto;
+    }
   }
 }
