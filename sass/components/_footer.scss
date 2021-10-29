@@ -6,6 +6,14 @@
   margin: 0 auto;
   font-size: 1.4rem;
 
+  @include respond(tablet-port) {
+    padding: 4rem 8rem;
+  }
+
+  @include respond(phone) {
+    padding: 1.6rem 3.2rem;
+  }
+
   &__logo-box {
     text-align: center;
     border-bottom: 1px solid $color-grey--dark-1;
@@ -15,6 +23,10 @@
   &__logo {
     width: 30rem;
     height: auto;
+
+    @include respond(tablet-port) {
+      width: 20rem;
+    }
   }
 
   &__navigation {
@@ -28,12 +40,22 @@
         margin-right: 2rem;
       }
     }
+
+    @include respond(tablet-port) {
+      margin-right: 1rem;
+      text-align: center;
+    }
   }
 
   &__copyright {
     color: $color-grey--dark-2;
     font-size: 1.2rem;
     display: inline-block;
+
+    @include respond(tablet-port) {
+      font-size: 1rem;
+      text-align: center;
+    }
   }
 
   &__link:link,

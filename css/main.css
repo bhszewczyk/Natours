@@ -1,3 +1,11 @@
+/*
+---- BREAKPOINTS [px]
+0 - 600 (37.5em) - phone (phone)
+600 - 900 (56.25em) - tablet portrait (tablet-port)
+900 - 1200 (75em)- tablet landscape (tablet-land)
+1200 - 1800 - desktop (main css)
+> 1800px (112.5em) - big desktop (desktop-big)
+*/
 *,
 *::after,
 *::before {
@@ -11,9 +19,40 @@ html {
   font-size: 62.5%;
 }
 
+@media (max-width: 37.5em) {
+  html {
+    font-size: 40%;
+  }
+}
+
+@media (max-width: 56.25em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 75em) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  }
+}
+
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  padding: 2rem;
+}
+
+@media (max-width: 56.25em) {
+  body {
+    padding: 0;
+  }
 }
 
 @-webkit-keyframes moveInRight {
@@ -99,7 +138,6 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: #555;
-  padding: 2rem;
 }
 
 .heading-1 {
@@ -121,6 +159,13 @@ body {
           animation-timing-function: ease-out;
 }
 
+@media (max-width: 37.5em) {
+  .heading-1--main {
+    font-size: 5.2rem;
+    letter-spacing: 1.2rem;
+  }
+}
+
 .heading-1--sub {
   display: block;
   font-size: 2rem;
@@ -131,6 +176,13 @@ body {
           animation-duration: 2s;
   -webkit-animation-timing-function: ease-out;
           animation-timing-function: ease-out;
+}
+
+@media (max-width: 37.5em) {
+  .heading-1--sub {
+    font-size: 1.8rem;
+    letter-spacing: 0.4rem;
+  }
 }
 
 .heading-2 {
@@ -146,6 +198,18 @@ body {
   letter-spacing: 0.2rem;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
+}
+
+@media (max-width: 56.25em) {
+  .heading-2 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .heading-2 {
+    font-size: 2.4rem;
+  }
 }
 
 .heading-2:hover {
@@ -719,6 +783,18 @@ body {
   font-size: 1.4rem;
 }
 
+@media (max-width: 56.25em) {
+  .footer {
+    padding: 4rem 8rem;
+  }
+}
+
+@media (max-width: 37.5em) {
+  .footer {
+    padding: 1.6rem 3.2rem;
+  }
+}
+
 .footer__logo-box {
   text-align: center;
   border-bottom: 1px solid #555;
@@ -728,6 +804,12 @@ body {
 .footer__logo {
   width: 30rem;
   height: auto;
+}
+
+@media (max-width: 56.25em) {
+  .footer__logo {
+    width: 20rem;
+  }
 }
 
 .footer__navigation {
@@ -746,10 +828,24 @@ body {
   margin-right: 2rem;
 }
 
+@media (max-width: 56.25em) {
+  .footer__navigation {
+    margin-right: 1rem;
+    text-align: center;
+  }
+}
+
 .footer__copyright {
   color: #999;
   font-size: 1.2rem;
   display: inline-block;
+}
+
+@media (max-width: 56.25em) {
+  .footer__copyright {
+    font-size: 1rem;
+    text-align: center;
+  }
 }
 
 .footer__link:link, .footer__link:visited {
@@ -878,8 +974,15 @@ body {
   background-size: cover;
   background-position: top;
   position: relative;
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
-          clip-path: polygon(0 0, 100% 0%, 100% 80%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 80vh, 0 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 80vh, 0 100%);
+}
+
+@media (max-width: 56.25em) {
+  .header {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 86vh, 0 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 86vh, 0 100%);
+  }
 }
 
 .header__logo-box {
@@ -911,12 +1014,43 @@ body {
   margin-bottom: 4rem;
 }
 
+@media (max-width: 56.25em) {
+  .row:not(:last-child) {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .row {
+    max-width: 50rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .row {
+    max-width: 50rem;
+  }
+}
+
 .row [class^="col-"] {
   float: left;
 }
 
 .row [class^="col-"]:not(:last-child) {
   margin-right: 6rem;
+}
+
+@media (max-width: 56.25em) {
+  .row [class^="col-"]:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 56.25em) {
+  .row [class^="col-"] {
+    width: 100% !important;
+  }
 }
 
 .row .col-1-of-2 {
@@ -962,6 +1096,13 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 56.25em) {
+  .navigation__button {
+    top: 2rem;
+    right: 2rem;
+  }
+}
+
 .navigation__background {
   height: 6.2rem;
   width: 6.2rem;
@@ -975,6 +1116,13 @@ body {
   transition: -webkit-transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
   transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
   transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1), -webkit-transform 0.8s cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+@media (max-width: 56.25em) {
+  .navigation__background {
+    top: 2.4rem;
+    right: 2.4rem;
+  }
 }
 
 .navigation__nav {
