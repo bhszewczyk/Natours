@@ -25,11 +25,11 @@
   }
 
   &__logo {
-    width: 30rem;
+    width: 15rem;
     height: auto;
 
     @include respond(tablet-port) {
-      width: 20rem;
+      width: 10rem;
     }
   }
 

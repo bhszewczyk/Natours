@@ -1009,13 +1009,13 @@ body {
 }
 
 .footer__logo {
-  width: 30rem;
+  width: 15rem;
   height: auto;
 }
 
 @media (max-width: 56.25em) {
   .footer__logo {
-    width: 20rem;
+    width: 10rem;
   }
 }
 
