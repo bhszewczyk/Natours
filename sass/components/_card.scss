@@ -174,7 +174,7 @@
 }
 
 // FOR TOUCH DEVICES
-@include respond(tablet-port) {
+@media only screen and (max-width: 56.25em), only screen and(hover: none) {
   .card {
     height: auto;
     border-radius: $border-radius-default;
@@ -204,7 +204,7 @@
     }
 
     &__details {
-      padding: 1rem 6rem;
+      padding: 1rem 3rem;
     }
 
     // BACK SIDE STYLING
